@@ -21,18 +21,24 @@ export const Header = () => {
     <>
 
     <div className='container m-auto text-center p-4'>
+
         <form className='p-3' onSubmit={handleSubmit}>
 
-          <div className=''>
+          <div>
 
-          <input type="text"
-          placeholder='your ip addres'
+          <input 
+          type="text"
+          placeholder='Your IP Addres'
           required 
           onChange={(e)=>setinputdata(e.target.value)}
           />
           
-          <button type='submit' className='btn btn-primary'>Find</button>
+          
 
+          </div>
+
+          <div>
+          <button type='submit' className='btn btn-primary'>Find</button>
           </div>
           
         </form>

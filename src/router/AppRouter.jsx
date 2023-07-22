@@ -14,7 +14,7 @@ import axios from 'axios'
 
 export const AppRouter = () => {
 
-  const [userip, setuserip] = useState("87.209.72.221")
+  const [userip, setuserip] = useState("101.44.220.0")
   const [ipdata, setipdata] = useState("")
 
   const getData= async()=>{
@@ -48,10 +48,10 @@ export const AppRouter = () => {
     
     <Routes>
       <Route path='/' element={<Home/>}>
-      <Route path='location' element={<Location />}/>
-      <Route path='time' element={<Time/>}/>
-      <Route path='security' element={<Security/>}/>
-      <Route path='more' element={<More/>}/>
+        <Route path='location' element={<Location />}/>
+        <Route path='time' element={<Time/>}/>
+        <Route path='security' element={<Security/>}/>
+        <Route path='more' element={<More/>}/>
       </Route>
     </Routes>
 
