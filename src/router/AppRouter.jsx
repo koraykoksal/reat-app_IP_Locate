@@ -5,7 +5,7 @@ import { Home } from '../pages/Home'
 import { Navbar } from '../components/Navbar'
 import { Location } from '../pages/Location'
 import { Time } from '../pages/Time'
-import { Security } from '../pages/Security'
+import { Country } from '../pages/Country'
 import { More } from '../pages/More'
 import { Header } from '../components/Header'
 import { useState,useEffect } from 'react'
@@ -50,7 +50,7 @@ export const AppRouter = () => {
       <Route path='/' element={<Home/>}>
         <Route path='location' element={<Location />}/>
         <Route path='time' element={<Time/>}/>
-        <Route path='security' element={<Security/>}/>
+        <Route path='country' element={<Country/>}/>
         <Route path='more' element={<More/>}/>
       </Route>
     </Routes>

@@ -4,26 +4,32 @@
 }
 
 
-form {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 0.5rem;
-}
-
-form input {
+input {
 
     background-color: transparent;
     border: 1px solid #7B8FA1;
-    padding: 0.5rem;
-    width: 75%;
-    height: 38px;
+    padding: 0.2rem;
     border-radius: 0.5rem;
     align-items: center;
 }
 
+.wifiIcon{
+    text-align: right;
+}
 
-.searchInput{
+.btnSearch{
+    text-align: left;
+}
 
-    width: 300px;
+.nav{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+input{
+    width: 100%;
 }

@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <>
 
-    <Nav className="justify-content-center p-3 text-danger" variant="underline" defaultActiveKey="/home">
+    {/* <Nav className="justify-content-center p-3 text-danger" variant="underline" defaultActiveKey="/home">
       <Nav.Item>
         <Link to="/location">Location</Link>
       </Nav.Item>
@@ -16,12 +16,19 @@ export const Navbar = () => {
       <Link to="/time">Time</Link>
       </Nav.Item>
       <Nav.Item>
-      <Link to="/security">Security</Link>
+      <Link to="/country">Country</Link>
       </Nav.Item>
       <Nav.Item>
       <Link to="/more">More</Link>
       </Nav.Item>
-    </Nav>
+    </Nav> */}
+
+    <div className='nav'>
+      <div><Link to="/location">Location</Link></div>
+      <div><Link to="/time">Time</Link></div>
+      <div><Link to="/country">Country</Link></div>
+      <div><Link to="/more">More</Link></div>
+    </div>
     
     </>
   )

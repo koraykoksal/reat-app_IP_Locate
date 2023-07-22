@@ -26,9 +26,9 @@ export const Header = () => {
 
     <div className='container m-auto text-center p-4 search'>
 
-        <form className='p-3'>
+        {/* <form className='row m-auto p-3'>
 
-          <div className='searchInput'>
+          <div className='col-md-4 searchInput'>
 
           <AiOutlineWifi 
           size={25}/>
@@ -42,8 +42,7 @@ export const Header = () => {
           
           </div>
 
-          <div>
-          {/* <button type='submit' className='btn btn-primary'>Find</button> */}
+          <div className='col-sm-2'>
           <FcSearch 
           size={30}
           type='button'
@@ -51,7 +50,35 @@ export const Header = () => {
           />
           </div>
           
-        </form>
+        </form> */}
+
+        <div className='row'>
+        
+        <div className='col wifiIcon'>
+        <AiOutlineWifi 
+          size={25}/>
+        </div>
+          
+          
+          <div className='col-sm-4'>
+          <input 
+          type="text"
+          placeholder='Your IP Addres'
+          required 
+          onChange={(e)=>setinputdata(e.target.value)}
+          />
+          </div>
+          
+          <div className='col btnSearch'>
+          <FcSearch 
+          size={30}
+          type='button'
+          onClick={handleSubmit}
+          />
+          </div>
+          
+
+        </div>
     </div>
 
 
