@@ -3,9 +3,9 @@ import { IP_Context } from '../context/UserIPAddress'
 
 export const Country = () => {
 
-  const {ipdata, setipdata}=useContext(IP_Context)
+  const {ipdata}=useContext(IP_Context)
 
-  const {country,phone_code,population,capital,area_size,languages,currency} = ipdata;
+  const {country,capital,currency} = ipdata;
 
   console.log("capital : ",capital)
   return (

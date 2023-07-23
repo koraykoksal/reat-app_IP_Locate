@@ -3,7 +3,7 @@ import { IP_Context } from '../context/UserIPAddress'
 
 export const Time = () => {
 
-  const {ipdata, setipdata} = useContext(IP_Context)
+  const {ipdata} = useContext(IP_Context)
 
   const {time} = ipdata;
   return (

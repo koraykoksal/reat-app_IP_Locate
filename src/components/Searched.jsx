@@ -4,7 +4,7 @@ import { IP_Context } from '../context/UserIPAddress'
 
 export const Searched = () => {
 
-const {searched,setsearched} = useContext(IP_Context)
+const {searched} = useContext(IP_Context)
 
 const ips=[]
 

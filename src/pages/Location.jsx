@@ -6,14 +6,14 @@ import { Outlet } from 'react-router-dom'
 
 export const Location = () => {
 
-  const {ipdata, setipdata} = useContext(IP_Context)
+  const {ipdata} = useContext(IP_Context)
 
   console.log(ipdata)
 
   const {city,postcode,area,continent,location,country} = ipdata;
   
   <Outlet/>
-  
+
   return (
 
     

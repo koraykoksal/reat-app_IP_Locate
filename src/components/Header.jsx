@@ -9,15 +9,21 @@ import { NavigationBars } from './NavigationBars'
 
 export const Header = () => {
 
-  const {userip, setuserip} = useContext(IP_Context)
+  const {setuserip} = useContext(IP_Context)
   const {searched,setsearched} = useContext(IP_Context)
 
   const [inputdata, setinputdata] = useState("")
 
+  const handleKeyDown=(e)=>{
 
+    if(inputdata != "" && e.keyCode == 13){
+      handleSubmit();
+    }
+
+  }
 
   const handleSubmit=(e)=>{
-    e.preventDefault();
+    //e.preventDefault();
 
     setuserip(inputdata)
 
@@ -53,6 +59,8 @@ export const Header = () => {
           required
           value={inputdata} 
           onChange={(e)=>setinputdata(e.target.value)}
+          onKeyDown={handleKeyDown}
+          
           />
           </div>
           
