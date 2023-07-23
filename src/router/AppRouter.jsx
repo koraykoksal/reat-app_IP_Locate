@@ -16,8 +16,10 @@ export const AppRouter = () => {
 
   const [userip, setuserip] = useState("101.44.220.0")
   const [ipdata, setipdata] = useState("")
-  const [searched,setsearched] = useState("")
+  const [searched,setsearched] = useState([])
 
+  
+  
   const getData= async()=>{
   
     try {

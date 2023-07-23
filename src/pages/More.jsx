@@ -31,14 +31,12 @@ export const More = () => {
   return (
     
     <div className=' col-sm-4 col-md-4 m-auto cardTable'>
-    <table className='table text-center m-auto' width={25}>
-      <thead className='thead-dark'>
-        <tr>
-          <th>Languages</th>
-          <td></td>
-        </tr>
-        { lang.map((item)=>(
+    <table className='table table-borderless table-dark text-center m-auto' width={25}>
+      <thead>
+       
+        { lang.map((item,i)=>(
           <tr>
+            <th>Languages {i+1}</th>
           <td>{item}</td>
           </tr> 
         )) }

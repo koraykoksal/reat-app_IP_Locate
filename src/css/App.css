@@ -21,17 +21,24 @@ input {
     text-align: left;
 }
 
-.nav{
+.navs{
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 1rem;
+    list-style: none;
 }
 
 input{
     width: 100%;
 }
 
+.navs li{
+    text-decoration: none;
+}
 
+*{
+    background-color: #FCAEAE;
+}

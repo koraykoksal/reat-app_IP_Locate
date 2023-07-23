@@ -15,20 +15,26 @@ export const Header = () => {
 
   const [inputdata, setinputdata] = useState("")
 
+
+
   const handleSubmit=(e)=>{
     e.preventDefault();
 
     setuserip(inputdata)
-    setsearched(inputdata)
+
+    setsearched([...searched,inputdata])
+
     setinputdata("")
   }
-console.log("input data",inputdata)
+
+
+
   return (
     <>
 
     <div className='container m-auto text-center p-4 search'>
 
-      <div className='text-center text-primary p-5'>
+      <div className='text-center  p-5'>
       <h3>With Your IP Address Country Information</h3>
       </div>
       

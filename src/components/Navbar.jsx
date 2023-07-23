@@ -1,6 +1,8 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
+import {BiLocationPlus,BiTimeFive,BiSolidCity} from 'react-icons/bi';
+import {CiCircleMore} from "react-icons/ci"
 
 export const Navbar = () => {
 
@@ -8,39 +10,25 @@ export const Navbar = () => {
   return (
     <>
 
-    {/* <Nav className="justify-content-center p-3 text-danger" variant="underline" defaultActiveKey="/home">
-      <Nav.Item>
-        <Link to="/location">Location</Link>
-      </Nav.Item>
-      <Nav.Item>
-      <Link to="/time">Time</Link>
-      </Nav.Item>
-      <Nav.Item>
-      <Link to="/country">Country</Link>
-      </Nav.Item>
-      <Nav.Item>
-      <Link to="/more">More</Link>
-      </Nav.Item>
-    </Nav> */}
+    <div className='navs'>
 
-    <div className='nav navs'>
-      {/* <div>
-        <li><Link to="/location">Location</Link></li>
-      </div>
-      <div>
-        <Link to="/time">Time</Link>
-      </div>
-      <div>
-        <Link to="/country">Country</Link>
-      </div>
-      <div>
-        <Link to="/more">More</Link>
-      </div> */}
       
-      <li><Link to="/location">Location</Link></li>
-      <Link to="/time">Time</Link>
-      <Link to="/country">Country</Link>
-      <Link to="/more">More</Link>
+      <li>
+        <BiLocationPlus size={25}/> <Link to="/location" >Location</Link>
+      </li>
+
+      <li>
+        <BiTimeFive size={25}/> <Link to="/time">Time</Link>
+      </li>
+
+      <li>
+        <BiSolidCity size={25}/><Link to="/country">Country</Link>
+      </li>
+      
+      <li>
+      <CiCircleMore size={25}/> <Link to="/more">More</Link>
+      </li>
+      
     </div>
     
     </>
