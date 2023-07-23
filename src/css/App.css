@@ -29,16 +29,22 @@ input {
     gap: 1.5rem;
     padding: 1rem;
     list-style: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
 }
 
 input{
     width: 100%;
 }
 
-.navs li{
+.links{
     text-decoration: none;
+    color: #CEE6F3;
+    font-size: 1.3rem;
 }
 
 *{
     background-color: #FCAEAE;
 }
+

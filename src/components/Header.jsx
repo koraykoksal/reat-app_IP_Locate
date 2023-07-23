@@ -1,10 +1,10 @@
 import React from 'react'
-import { Navbar } from './Navbar'
 import axios from 'axios'
 import { useContext,useState } from 'react'
 import { IP_Context } from '../context/UserIPAddress'
 import { FcSearch } from 'react-icons/fc'
 import {AiOutlineWifi} from 'react-icons/ai'
+import { NavigationBars } from './NavigationBars'
 
 
 
@@ -70,7 +70,7 @@ export const Header = () => {
     </div>
 
 
-    <Navbar/>
+    <NavigationBars/>
     
     </>
   )

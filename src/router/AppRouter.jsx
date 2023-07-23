@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Home } from '../pages/Home'
-import { Navbar } from '../components/Navbar'
 import { Location } from '../pages/Location'
 import { Time } from '../pages/Time'
 import { Country } from '../pages/Country'
