@@ -11,27 +11,32 @@ export const Header = () => {
 
   const {setuserip} = useContext(IP_Context)
   const {searched,setsearched} = useContext(IP_Context)
-
   const [inputdata, setinputdata] = useState("")
+
 
   const handleKeyDown=(e)=>{
 
-    if(inputdata != "" && e.keyCode == 13){
+    if(inputdata !== "" && e.keyCode == 13){
       handleSubmit();
     }
-
   }
 
   const handleSubmit=(e)=>{
     //e.preventDefault();
 
-    setuserip(inputdata)
+    if(inputdata){
+      
+      setuserip(inputdata)
 
-    setsearched([...searched,inputdata])
-
-    setinputdata("")
+      setsearched([...searched,inputdata])
+  
+      setinputdata("")
+    }
+    
   }
 
+
+  
 
 
   return (
@@ -41,9 +46,9 @@ export const Header = () => {
 
       <div className='text-center  p-5'>
       <h3>With Your IP Address Country Information</h3>
+
       </div>
       
-
         <div className='row'>
         
         <div className='col wifiIcon'>

@@ -5,9 +5,8 @@ export const Country = () => {
 
   const {ipdata}=useContext(IP_Context)
 
-  const {country,capital,currency} = ipdata;
+  const {country,currency} = ipdata;
 
-  console.log("capital : ",capital)
   return (
     
     <div className='col-sm-4 col-md-4 m-auto cardTable'>

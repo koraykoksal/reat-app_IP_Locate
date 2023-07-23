@@ -15,32 +15,36 @@ export const AppRouter = () => {
   const [userip, setuserip] = useState("101.44.220.0")
   const [ipdata, setipdata] = useState("")
   const [searched,setsearched] = useState([])
-
  
   //get api key
   const getApiK=async()=>{
     try {
       const result = await axios("https://64ba69915e0670a501d61f70.mockapi.io/api/k/getgeo")
-      //console.log(result.data[0].geokey)
+      
+      //console.log("apikey : ",result.data[0].geokey)
       getData(result.data[0].geokey)
 
     } catch (error) {
+
       console.log(error)
     }
   }
   
   //get geology data
   const getData= async(dataK)=>{
-  
+
     try {
 
       const res = await axios(`https://api.getgeoapi.com/v2/ip/${userip}?api_key=${dataK}`)
       
       setipdata(res.data)
 
+      //console.log("res result : ",res)
 
     } catch (error) {
+
       console.log(error)
+
     }
   }
 

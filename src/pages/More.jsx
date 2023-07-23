@@ -23,9 +23,9 @@ export const More = () => {
   }
   
 
-  
+
   traverseObject(country?.languages);
-  console.log("langg",lang)
+
 
   return (
     

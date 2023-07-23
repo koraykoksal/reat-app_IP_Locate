@@ -6,6 +6,8 @@ export const Time = () => {
   const {ipdata} = useContext(IP_Context)
 
   const {time} = ipdata;
+
+  
   return (
     
     <div className='col-sm-4 col-md-4 m-auto cardTable'>
