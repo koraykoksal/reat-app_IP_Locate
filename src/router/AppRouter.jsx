@@ -1,5 +1,4 @@
 import React from 'react'
-import { Footer } from '../components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import { Home } from '../pages/Home'
 import { Navbar } from '../components/Navbar'
@@ -11,11 +10,13 @@ import { Header } from '../components/Header'
 import { useState,useEffect } from 'react'
 import { IP_Context } from '../context/UserIPAddress'
 import axios from 'axios'
+import { Searched } from '../components/Searched'
 
 export const AppRouter = () => {
 
   const [userip, setuserip] = useState("101.44.220.0")
   const [ipdata, setipdata] = useState("")
+  const [searched,setsearched] = useState("")
 
   const getData= async()=>{
   
@@ -42,7 +43,7 @@ export const AppRouter = () => {
 
   return (
     <>
-    <IP_Context.Provider value={{userip,setuserip,ipdata,setipdata}}>
+    <IP_Context.Provider value={{userip,setuserip,ipdata,setipdata,searched,setsearched}}>
 
     <Header/>
     
@@ -54,6 +55,8 @@ export const AppRouter = () => {
         <Route path='more' element={<More/>}/>
       </Route>
     </Routes>
+
+    <Searched/>
 
     </IP_Context.Provider>
 

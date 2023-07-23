@@ -11,6 +11,7 @@ import {AiOutlineWifi} from 'react-icons/ai'
 export const Header = () => {
 
   const {userip, setuserip} = useContext(IP_Context)
+  const {searched,setsearched} = useContext(IP_Context)
 
   const [inputdata, setinputdata] = useState("")
 
@@ -18,9 +19,10 @@ export const Header = () => {
     e.preventDefault();
 
     setuserip(inputdata)
-
+    setsearched(inputdata)
+    setinputdata("")
   }
-
+console.log("input data",inputdata)
   return (
     <>
 
@@ -43,7 +45,8 @@ export const Header = () => {
           <input 
           type="text"
           placeholder='Your IP Addres'
-          required 
+          required
+          value={inputdata} 
           onChange={(e)=>setinputdata(e.target.value)}
           />
           </div>
