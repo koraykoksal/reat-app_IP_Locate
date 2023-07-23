@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { IP_Context } from '../context/UserIPAddress'
+import { Outlet } from 'react-router-dom'
 
 
 export const Location = () => {
@@ -11,9 +12,11 @@ export const Location = () => {
 
   const {city,postcode,area,continent,location,country} = ipdata;
   
-
+  <Outlet/>
+  
   return (
 
+    
 
     <div className='col-sm-4 col-md-4 m-auto cardTable'>
         <table className='table table-borderless table-dark text-center m-auto' width={25}>
@@ -46,6 +49,6 @@ export const Location = () => {
         </table>
     </div>
         
-
+    
   )
 }

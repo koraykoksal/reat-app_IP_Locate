@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { IP_Context } from '../context/UserIPAddress'
-import { useEffect } from 'react'
+
 
 export const Searched = () => {
 

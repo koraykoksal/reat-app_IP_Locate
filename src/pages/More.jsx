@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { IP_Context } from '../context/UserIPAddress'
-import { NavItem } from 'react-bootstrap';
 
 export const More = () => {
 

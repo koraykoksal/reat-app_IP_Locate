@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes,Navigate } from 'react-router-dom'
 import { Home } from '../pages/Home'
 import { Location } from '../pages/Location'
 import { Time } from '../pages/Time'
@@ -35,7 +35,6 @@ export const AppRouter = () => {
 
   useEffect(() => {
     
-    
     if(userip){
       getData();
     }
@@ -49,12 +48,13 @@ export const AppRouter = () => {
     <Header/>
     
     <Routes>
-      <Route path='/' element={<Home/>}>
-        <Route path='location' element={<Location />}/>
+        {/* <Route path='/'  element={<Home/>}/> */}
+        <Route index element={<Location />}/>
         <Route path='time' element={<Time/>}/>
         <Route path='country' element={<Country/>}/>
         <Route path='more' element={<More/>}/>
-      </Route>
+        <Route path="*" element={<Navigate to="/" />} />
+      {/* </Route> */}
     </Routes>
 
     <Searched/>

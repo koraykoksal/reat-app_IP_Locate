@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import { useContext,useState } from 'react'
 import { IP_Context } from '../context/UserIPAddress'
 import { FcSearch } from 'react-icons/fc'
