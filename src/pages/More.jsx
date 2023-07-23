@@ -8,8 +8,25 @@ export const More = () => {
 
   const {country} = ipdata;
 
+  let lang=[]
 
+  function traverseObject(obj) {
+    for (const key in obj) {
+      if (typeof obj[key] === 'object') {
+        traverseObject(obj[key]);
+      } else {
+        // console.log(`${key}: ${obj[key]}`);
+        lang.push(`${key}: ${obj[key]}`)
+      }
 
+    }
+    
+  }
+  
+
+  
+  traverseObject(country?.languages);
+  console.log("langg",lang)
 
   return (
     
@@ -18,20 +35,13 @@ export const More = () => {
       <thead className='thead-dark'>
         <tr>
           <th>Languages</th>
-          <td>{country?.languages?.tr}</td>
+          <td></td>
         </tr>
-        <tr>
-          <th></th>
-          <td>{country?.languages?.az}</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>{country?.languages?.av}</td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>{country?.languages?.ku}</td>
-        </tr>
+        { lang.map((item)=>(
+          <tr>
+          <td>{item}</td>
+          </tr> 
+        )) }
       </thead>
     </table>
 </div>

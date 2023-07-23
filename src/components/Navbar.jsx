@@ -23,11 +23,24 @@ export const Navbar = () => {
       </Nav.Item>
     </Nav> */}
 
-    <div className='nav'>
-      <div><Link to="/location">Location</Link></div>
-      <div><Link to="/time">Time</Link></div>
-      <div><Link to="/country">Country</Link></div>
-      <div><Link to="/more">More</Link></div>
+    <div className='nav navs'>
+      {/* <div>
+        <li><Link to="/location">Location</Link></li>
+      </div>
+      <div>
+        <Link to="/time">Time</Link>
+      </div>
+      <div>
+        <Link to="/country">Country</Link>
+      </div>
+      <div>
+        <Link to="/more">More</Link>
+      </div> */}
+      
+      <li><Link to="/location">Location</Link></li>
+      <Link to="/time">Time</Link>
+      <Link to="/country">Country</Link>
+      <Link to="/more">More</Link>
     </div>
     
     </>
