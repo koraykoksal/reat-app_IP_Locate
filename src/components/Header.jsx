@@ -16,7 +16,7 @@ export const Header = () => {
 
   const handleKeyDown=(e)=>{
 
-    if(inputdata !== "" && e.keyCode == 13){
+    if((inputdata !== "") && (e.keyCode === 13)){
       handleSubmit();
     }
   }
@@ -25,7 +25,6 @@ export const Header = () => {
     //e.preventDefault();
 
     if(inputdata){
-      
       setuserip(inputdata)
 
       setsearched([...searched,inputdata])
@@ -49,7 +48,7 @@ export const Header = () => {
 
       </div>
       
-        <div className='row'>
+      <div className='row'>
         
         <div className='col wifiIcon'>
         <AiOutlineWifi 
@@ -57,28 +56,31 @@ export const Header = () => {
         </div>
           
           
-          <div className='col-sm-4'>
+        <div className='col-sm-4'>
+          <form action="">
+
           <input 
           type="text"
-          placeholder='Your IP Addres'
+          placeholder='Your IP Address'
           required
           value={inputdata} 
           onChange={(e)=>setinputdata(e.target.value)}
-          onKeyDown={handleKeyDown}
+          onKeyDown={handleKeyDown}/>
+
+          </form>
           
-          />
-          </div>
+        </div>
           
-          <div className='col btnSearch'>
+        <div className='col btnSearch'>
           <FcSearch 
           size={30}
           type='button'
           onClick={handleSubmit}
           />
-          </div>
+        </div>
           
 
-        </div>
+      </div>
     </div>
 
 
